@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+#homeDiv{
+  display: flex;
+  justify-content: space-between;
+}
+#homeImg{
+  width: 400px;
+  /* margin-top: 50px;
+  margin-left: 100px;; */
+}
+
+#homeVid{
+  display: flex;
+  align-content: center;
+}
+
+.financingImg{
+  max-width: 450px;
+}
+#financingDivTwo{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(0, 155, 119);
+  color: white;
+}
+
+#financingDivThree{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#financingTrust{
+  font-size: 42px;
+}
+
+/* .homeLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.homeRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 200px;
+} */
+
+#aboutDiv{
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 200px;
+}
+
+.aboutRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+#aboutImg{
+  width: 300px;
+
+}
+
+.aboutCarousel{
+  display: flex;
+}
+
+.carouselImg{
+  width: 200px;
+}
+
+
+#logButtons{
+  display: flex;
+  align-items: flex-end;
+}

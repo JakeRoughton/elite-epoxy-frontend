@@ -1,94 +1,75 @@
 .App {
+  background-color: lightgray;
   text-align: center;
 }
 
-#homeDiv{
-  display: flex;
-  justify-content: space-between;
-}
-#homeImg{
-  width: 400px;
-  /* margin-top: 50px;
-  margin-left: 100px;; */
+.homeImg{
+  width:400px;
+  margin-right: 100px;
 }
 
-#homeVid{
-  display: flex;
-  align-content: center;
+.blogImg{
+  width: 500px; 
 }
 
-.financingImg{
-  max-width: 450px;
-}
-#financingDivTwo{
-  display: flex;
-  justify-content: space-around;
-  background-color: rgb(0, 155, 119);
-  color: white;
+.blogLeftCards{
+  margin-left:50px;
 }
 
-#financingDivThree{
+
+.vidContainer{
+  display: flex;
+  justify-content: center;
+}
+
+#contestdiv{
   display: flex;
   justify-content: space-around;
-
+  background-color: #046307;
 }
 
-#financingTrust{
-  font-size: 42px;
+#aboutCard{
+  margin-left:100px;
 }
 
-/* .homeLeft{
+#requestFormDiv{
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 50%;
+  justify-content: center;
+  min-height: 70vh;
 }
-
-.homeRight{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  justify-content: space-between;
-  width: 50%;
-  margin-bottom: 200px;
-} */
 
 #aboutDiv{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.aboutLeft{
+#contactDiv{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.financingDiv{
+  display:flex;
+  justify-content: space-between;
+  background-color: #046307;
+}
+
+.financingMidBanner{
+  color: white;
+}
+
+#navbar{
+  background-color: #046307;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  justify-content: space-between;
-  width: 50%;
-  margin-bottom: 200px;
-}
-
-.aboutRight{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 50%;
-}
-
-#aboutImg{
-  width: 300px;
-
-}
-
-.aboutCarousel{
-  display: flex;
-}
-
-.carouselImg{
-  width: 200px;
-}
-
-
-#logButtons{
-  display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }

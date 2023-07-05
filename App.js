@@ -1,17 +1,20 @@
+
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import GlobalLayout from './Layout/GlobalLayout';
-import HomePage from './Pages/HomePage'
-import About from './Pages/About'
-import Gallery from './Pages/Gallery'
-import RequestForm from './Pages/RequestForm'
-import Blogs from './Pages/Blogs'
-import Footer from './Components/Footer';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
-import Contact from './Pages/Contact';
-import Financing from './Pages/Financing';
-
+import GlobalLayout from './layout/GlobalLayout';
+import HomePage from './pages/Homepage'
+import About from './pages/About'
+import Gallery from './pages/Gallery'
+import RequestForm from './pages/RequestForm'
+import RequestFormCustom from './pages/RequestFormCustom'
+import RequestFormVirtual from './pages/RequestFormVirtual';
+import Blogs from './pages/Blogs'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Contact from './pages/Contact'
+import Financing from './pages/Financing'
+import Contest from './pages/Contest'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 	const router = createBrowserRouter([
@@ -20,7 +23,7 @@ function App() {
 			element:<GlobalLayout/>,
 			children:[
 				{
-					path:"/",
+					path:"/Home",
 					element: <HomePage />
 				},
 				{
@@ -51,10 +54,22 @@ function App() {
 					path: "/Financing",
 					element: <Financing/>
 				},
-			{
-				path: "/Contact",
-				element: <Contact/>
-			}
+        		{
+          			path: "/RequestFormCustom",
+          			element: <RequestFormCustom/>
+        		},
+        		{
+          			path: "/RequestFormVirtual",
+          			element: <RequestFormVirtual/>
+        		},
+				{
+					path: "/Contact",
+					element: <Contact/>
+				},
+				{
+					path: "/contest",
+					element: <Contest/>
+				}
 
 
 			]
@@ -64,8 +79,10 @@ function App() {
   return (
     <div className="App">
 		<RouterProvider router={router}/>
-		<Footer />
     </div>
   );
   }
+
+
 export default App;
+

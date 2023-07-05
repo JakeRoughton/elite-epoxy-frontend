@@ -1,149 +1,93 @@
-import React, {useState} from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Button, Card, Form } from "react-bootstrap";
+import { useAuth } from "../Hooks/AuthContext";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { registerUser } from "../Hooks/AuthUtils";
 
-export default function Register() {
 
-  const [pwdMatch, setPwdMatch] = useState({
-    error: false,
-    message: ''
-  })
+const Register = (props) => {
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    
-    let userObj = {
-      firstname: data.get('firstName'),
-      lastname: data.get('lastName'),
-      email: data.get('email'),
-      password: data.get('password'),
-    };
+  const auth = useAuth();
+  const navigate = useNavigate();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  return (    
+  <>
+    <br />
+    <br />
+    <div id='requestFormDiv'>
+    <Card border='success' id='LoginCard' style={{ width: '30rem', height:'33rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
+  <Card.Body>
+    <Card.Title>Register</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">Please enter your information to register</Card.Subtitle>
+    <br />
+    <Card.Text>
+    <Form>
 
-    userObj.password !== data.get('password2') ? 
-    setPwdMatch({
-      error: true,
-      message: "Passwords do not Match"
-    })
-    :
-    setPwdMatch({
-      error: false,
-      message: ''
-    })
+    <Form.Group className="mb-3" controlId="formGridAddress1">
+    <Form.Label>First name</Form.Label>
+    <Form.Control 
+    name="firstName"
+    placeholder="First name"
+    value={firstName}
+		onChange={(e) => setFirstName(e.target.value)}
+    />
+  </Form.Group>
 
-  };
+  <Form.Group className="mb-3" controlId="formGridAddress2">
+    <Form.Label>Last name</Form.Label>
+    <Form.Control 
+    name="lastName"
+    placeholder="Last name" 
+    value={lastName}
+		onChange={(e) => setLastName(e.target.value)}
+    />
+  </Form.Group>
 
-  return (
+  <Form.Group className="mb-3" controlId="formGridAddress1">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control 
+    name="emailAddress"
+    placeholder="Email address" 
+    value={email}
+		onChange={(e) => setEmail(e.target.value)}
+    />
+  </Form.Group>
 
-      <Container component="main" maxWidth="xs">
+  <Form.Group className="mb-3" controlId="formGridAddress2">
+    <Form.Label>Password</Form.Label>
+    <Form.Control 
+    type="password"
+    name="password"
+    placeholder="Password" 
+    value={password}
+		onChange={(e) => setPassword(e.target.value)}
+    />
+  </Form.Group>
 
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Register
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  // error={true}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password2"
-                  label="Confirm Password"
-                  type="password"
-                  id="password2"
-                  autoComplete="new-password"
-                  error={pwdMatch.error}
-                  helperText={pwdMatch.message}
-                />
-              </Grid>
-              {/* <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid> */}
-            </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Register
-            </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="/login" variant="body2">
-                  Already have an account? Login here!
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
+    </Form>
+    </Card.Text>
 
-      </Container>
+    <a href="/login">Already a member? Login</a>
+    <br />
+    <Button variant='success' style={{backgroundColor:'#046307'}}
+    onClick={async () => {
+      const users = {firstName, lastName, email, password}
+      const registerResult = await registerUser(users)
+      if (registerResult.success) {
+        navigate("/login");
+      }
+    }}>Submit</Button>
 
+  </Card.Body>
+</Card>
+</div>
+<br />
+<br />              
+    </>
   );
 }
+
+export default Register;

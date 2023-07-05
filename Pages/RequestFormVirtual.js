@@ -1,143 +1,131 @@
 import React, { useState } from 'react';
+import { Col, Button, Row, Card, Form } from "react-bootstrap";
 
-
-const RequestForm = () =>{
+const RequestFormVirtual = () =>{
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
-    const [number, setNumber] = useState('')
-    const [addressOne, setAddressOne] = useState('')
-    const [addressTwo, setAddressTwo] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState ('')
-    const [zip, setZip] = useState('')
-    const [country, setCountry] = useState('')
     const [comments, setComments] = useState('')
-
-    let handleChange =(e) =>{
-        setFirstName(e.target.value);
-        setLastName(e.target.value);
-        setEmail(e.target.value);
-        setAddressOne(e.target.value);
-        setAddressTwo(e.target.value);
-        setCity(e.target.value);
-        setState(e.target.value);
-        setZip(e.target.value);
-        setCountry(e.target.value);
-        setNumber(e.target.value);
-        setComments(e.target.value);
-    }
-
-
-
-    return (
+    
+    return(
         <>
-        <h1>Virtual request Form</h1>
-        ----------------------------------------------------------------
         <br />
-        <form>
-            <label>First name:
-            <input 
-            type='text'
-            value={firstName}
-            onChange={handleChange}
-            />
-            </label>
+        <div id='requestFormDiv'>
+        <Card border='success' id='requestFormCard' style={{ width: '30rem', height:'32rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
+      <Card.Body>
+        <Card.Title>Inspection Request Form</Card.Title>
 
-            <label>Last name:
-            <input 
-            type='text'
-            value={lastName}
-            onChange={handleChange}
-            size={30}
-            />
-            </label>
-            <br />  
-            <br />
-            <label>Email:
-            <input 
-            type='text'
-            value={email}
-            onChange={handleChange}
-            size={50}
-            />
-            <br />
-            <br />
-            </label>
-            <label>Street Address:
-            <input 
-            type='text'
-            value={addressOne}
-            onChange={handleChange}
-            size={50}
-            />
-            </label>
-            <br />
-            <br />
-            <label>Street Address 2:
-            <input 
-            type='text'
-            value={addressTwo}
-            onChange={handleChange}
-            size={50}
-            />
-            </label>
-            <br />
-            <br />
-            <label>City:
-            <input 
-            type='text'
-            value={city}
-            onChange={handleChange}
-            />
-            </label>
-            <label>State/Province:
-            <input 
-            type='text'
-            value={state}
-            onChange={handleChange}
-            />
-            <br />
-            <br />
-            </label>
-            <label>Postal/Zip code:
-            <input 
-            type='text'
-            value={zip}
-            onChange={handleChange}
-            />
-            </label>
-            <label>Country:
-            <input 
-            type='text'
-            value={country}
-            onChange={handleChange}
-            />
-            </label>
-            <br />
-            <br />
-            <label>Phone Number:
-            <input
-            type='text'
-            value={number}
-            onChange={handleChange}
-            />
-            </label>
-            <br />
-            <br />
-            <label>Comments:
-            <input 
-            type='text'
-            value={comments}
-            onChange={handleChange}
-            size={100}
-            />
-            </label>
-            
+        <Card.Text>
+        <Form>
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridFirstName">
+          <Form.Label>First name</Form.Label>
+          <Form.Control 
+          type="text"
+          placeholder="Enter first name" 
+          name='firstName'
+          value={firstName} 
+          onChange={(e) => setFirstName(e.target.value)}
+          />
+        </Form.Group>
 
-        </form>
+        <Form.Group as={Col} controlId="formGridLastName">
+          <Form.Label>Last name</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter last name" 
+          name='lastName'
+          value={lastName} 
+          onChange={(e) => setLastName(e.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control 
+          type="text" 
+          placeholder="Enter Email" 
+          name='email'
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)}
+          />
+        </Form.Group>
+      </Row>
+
+      <fieldset>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label as="legend" column sm={6} >
+            Preferred video platform
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Check
+              type="radio"
+              label="FaceTime"
+              name="formHorizontalRadios"
+              id="radio1"
+            />
+            <Form.Check
+              type="radio"
+              label="Zoom"
+              name="formHorizontalRadios"
+              id="Radio2"
+            />
+            <Form.Check
+              type="radio"
+              label="Google Duo"
+              name="formHorizontalRadios"
+              id="Radio3"
+            />
+          </Col>
+        </Form.Group>
+      </fieldset>
+
+      <Row className="mb-3">
+
+
+        <Form.Group as={Col} controlId="formGridTime">
+          <Form.Label>Morning or afternoon</Form.Label>
+          <Form.Select defaultValue="Choose...">
+            <option>A.M.</option>
+            <option>P.M.</option>
+          </Form.Select>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridTime">
+          <Form.Label>Timezone</Form.Label>
+          <Form.Select defaultValue="Choose...">
+            <option>Central</option>
+            <option>Pacific</option>
+            <option>Mountain</option>
+            <option>Eastern</option>
+          </Form.Select>
+        </Form.Group>
+
+      </Row>
+        </Form>
+        </Card.Text>
+
+        <Form.Group className="mb-3" controlId="formGridComments">
+        <Form.Label>Comments</Form.Label>
+        <Form.Control 
+        placeholder="Comments"
+        name='comments'
+        value={comments} 
+        onChange={(e) => setComments(e.target.value)} 
+        />
+        </Form.Group>
+
+        <Button href="/submit" variant="success">Submit</Button>
+
+      </Card.Body>
+    </Card>
+    <br />
+    <br />
+    </div>
+    <br />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
         </>
     )
 }
 
-export default RequestForm
+
+export default RequestFormVirtual

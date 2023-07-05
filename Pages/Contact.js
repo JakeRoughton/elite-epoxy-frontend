@@ -1,47 +1,23 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import { Paper } from '@mui/material';
-// import { makeStyles } from "@material-ui/core/styles";
-import FacebookIcon from '@mui/icons-material/Facebook';
+import React from "react"
+import { Card } from 'react-bootstrap'
 
+function Contact() {
+    return(
+        <div id='contactDiv'>
+        <Card style={{ width: '24rem', maxHeight:'14rem', marginTop:'2rem', marginBottom:'4rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
+            <Card.Body>
+                <Card.Title>Blake Mendoze</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Epoxy Specialist</Card.Subtitle>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                    <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+        </Card>
+        </div>
+    )
+}
 
-// const useStyles = makeStyles((theme) => ({
-// 	root: {
-// 	  "& > *": {
-// 		 margin: theme.spacing(1),
-// 		 width: theme.spacing(32),
-// 		 height: theme.spacing(16)
-// 	  }
-// 	},
-// 	grayPaper: {
-// 	  backgroundColor: '#c2c2c2'
-// 	},
-// 	customBorderRadius: {
-// 	  borderRadius: 25
-// 	}
-//  }));
-
-export default function Contact() {
-	// const classes = useStyles();
-   return (
-      <Box
-         sx={{
-         	display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            '& > :not(style)': {
-              m: 1,
-              width: 500,
-              height: 300,
-            },
-         }}
-      >
-      <Paper elevation={18}>
-			<h1>Blake Mendoza</h1>
-			<h3>Phone: 806-500-3575</h3>
-			<h4>Blake.Mendoza@EliteEpoxyTX.com</h4>
-			<FacebookIcon color="primary" fontSize="large"/>
-      </Paper>
-      </Box>
-      );
-    }
+export default Contact

@@ -1,19 +1,24 @@
 
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import GlobalLayout from './layout/GlobalLayout';
+import GlobalLayout from './layout/GlobalLayout'
 import HomePage from './pages/Homepage'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
 import RequestForm from './pages/RequestForm'
 import RequestFormCustom from './pages/RequestFormCustom'
-import RequestFormVirtual from './pages/RequestFormVirtual';
+import RequestFormVirtual from './pages/RequestFormVirtual'
 import Blogs from './pages/Blogs'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Contact from './pages/Contact'
 import Financing from './pages/Financing'
 import Contest from './pages/Contest'
+import Individual from './pages/Individual'
+import Terms from './pages/Terms'
+import Privacy from './pages/Privacy'
+import Security from './pages/Security'
+import Cookie from './pages/Cookie'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -28,47 +33,67 @@ function App() {
 				},
 				{
 					path: "/About",
-					element: <About/>
+					element: <About />
 				},
 				{
 					path: "/Gallery",
-					element: <Gallery/>
+					element: <Gallery />
 				},
 				{
 					path: "/RequestForm",
-					element: <RequestForm/>
+					element: <RequestForm />
 				},
 				{
 					path: "/Blogs",
-					element: <Blogs/>
+					element: <Blogs />
 				},
 				{
 					path: "/Login",
-					element: <Login/>
+					element: <Login />
 				},
 				{
 					path: "/Register",
-					element: <Register/>
+					element: <Register />
 				},
 				{
 					path: "/Financing",
-					element: <Financing/>
+					element: <Financing />
 				},
         		{
           			path: "/RequestFormCustom",
-          			element: <RequestFormCustom/>
+          			element: <RequestFormCustom />
         		},
         		{
           			path: "/RequestFormVirtual",
-          			element: <RequestFormVirtual/>
+          			element: <RequestFormVirtual />
         		},
 				{
 					path: "/Contact",
-					element: <Contact/>
+					element: <Contact />
 				},
 				{
 					path: "/contest",
-					element: <Contest/>
+					element: <Contest />
+				},
+				{
+					path: "/individual",
+					element: <Individual />
+				},
+				{
+					path: "/Terms",
+					element: <Terms />
+				},
+				{
+					path: "/Privacy",
+					element: <Privacy />
+				},
+				{
+					path: "/Security",
+					element: <Security />
+				},
+				{
+					path:"/Cookie",
+					element: <Cookie />
 				}
 
 

@@ -1,5 +1,7 @@
 import React from "react"
 import { Card } from 'react-bootstrap'
+import { AiFillFacebook } from 'react-icons/ai';
+import { PiInstagramLogoDuotone } from 'react-icons/pi';
 
 function Contact() {
     return(
@@ -9,11 +11,13 @@ function Contact() {
                 <Card.Title>Blake Mendoze</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Epoxy Specialist</Card.Subtitle>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        Fingerstache officia meh lo-fi chia. Bicycle fights roof party ea whatever et wolf.
                         </Card.Text>
-                    <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
+                    <AiFillFacebook style={{color:'blue'}}/>
+                <Card.Link href="#">Link</Card.Link>
+                <br />
+                <PiInstagramLogoDuotone />
+                <Card.Link href="#">Link</Card.Link>
             </Card.Body>
         </Card>
         </div>
@@ -21,3 +25,5 @@ function Contact() {
 }
 
 export default Contact
+
+

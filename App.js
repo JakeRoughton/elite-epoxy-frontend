@@ -28,7 +28,7 @@ function App() {
 			element:<GlobalLayout/>,
 			children:[
 				{
-					path:"/Home",
+					path:"/",
 					element: <HomePage />
 				},
 				{

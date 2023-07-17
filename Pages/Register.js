@@ -7,7 +7,7 @@ import { registerUser } from "../Hooks/AuthUtils";
 
 const Register = (props) => {
 
-  const auth = useAuth();
+  // const auth = useAuth();
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");

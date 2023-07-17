@@ -73,13 +73,14 @@ const Register = (props) => {
     <a href="/login">Already a member? Login</a>
     <br />
     <Button variant='success' style={{backgroundColor:'#046307'}}
-    onClick={async () => {
-      const users = {firstName, lastName, email, password}
-      const registerResult = await registerUser(users)
-      if (registerResult.success) {
-        navigate("/login");
-      }
-    }}>Submit</Button>
+    // onClick={async () => {
+    //   const users = {firstName, lastName, email, password}
+    //   const registerResult = await registerUser(users)
+    //   if (registerResult.success) {
+    //     navigate("/login");
+    //   }
+    // }}
+	    >Submit</Button>
 
   </Card.Body>
 </Card>

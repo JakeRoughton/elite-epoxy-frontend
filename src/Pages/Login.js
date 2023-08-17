@@ -35,7 +35,6 @@ export default function Login() {
     <Card.Title>Login</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">Please enter email and password</Card.Subtitle>
     <br />
-    <Card.Text>
     <Form>
 
   <Form.Group className="mb-3" controlId="formGridAddress1">
@@ -58,11 +57,10 @@ export default function Login() {
   </Form.Group>
 
     </Form>
-    </Card.Text>
 
     <a href="/register">Not a member? Register</a>
     <br />
-    <Button href="/home" variant='success' style={{backgroundColor:'#046307'}}>Submit</Button>
+    <Button href="/" variant='success' style={{backgroundColor:'#046307'}}>Submit</Button>
 
   </Card.Body>
 </Card>

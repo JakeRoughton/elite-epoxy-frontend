@@ -14,8 +14,6 @@ const RequestFormVirtual = () =>{
         <Card border='success' id='requestFormCard' style={{ width: '30rem', height:'32rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
       <Card.Body>
         <Card.Title>Inspection Request Form</Card.Title>
-
-        <Card.Text>
         <Form>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridFirstName">
@@ -103,7 +101,6 @@ const RequestFormVirtual = () =>{
 
       </Row>
         </Form>
-        </Card.Text>
 
         <Form.Group className="mb-3" controlId="formGridComments">
         <Form.Label>Comments</Form.Label>

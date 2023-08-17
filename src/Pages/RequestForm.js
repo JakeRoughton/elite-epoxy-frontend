@@ -19,7 +19,6 @@ const RequestForm = () =>{
       <Card.Body>
         <Card.Title>Standard Request Form</Card.Title>
 
-        <Card.Text>
         <Form>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridFirstName">
@@ -99,7 +98,6 @@ const RequestForm = () =>{
         </Form.Group>
       </Row>
         </Form>
-        </Card.Text>
 
         <Form.Group className="mb-3" controlId="formGridComments">
         <Form.Label>Comments</Form.Label>

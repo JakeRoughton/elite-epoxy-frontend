@@ -23,7 +23,6 @@ const Register = (props) => {
     <Card.Title>Register</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">Please enter your information to register</Card.Subtitle>
     <br />
-    <Card.Text>
     <Form>
 
     <Form.Group className="mb-3" controlId="formGridAddress1">
@@ -68,7 +67,6 @@ const Register = (props) => {
   </Form.Group>
 
     </Form>
-    </Card.Text>
 
     <a href="/login">Already a member? Login</a>
     <br />

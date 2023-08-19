@@ -21,7 +21,7 @@ function Financing() {
         <Card.Text>
         Austin skateboard +1 tousled, man braid man bun farm-to-table ex. Fam hexagon yuccie next level. Copper mug hashtag pabst wolf anim est occupy fingerstache fanny pack humblebrag flexitarian put a bird on it aesthetic thundercats single-origin coffee. Church-key copper mug beard do, gastropub crucifix blue bottle VHS cornhole microdosing enim aliqua banjo lumbersexual. Mumblecore gluten-free duis green juice truffaut fixie salvia marxism dolor ethical. Humblebrag enamel pin id pickled chia man braid waistcoat qui heirloom adipisicing kombucha. Bodega boys leggings art party, man bun excepteur gluten-free scenester dolor.
         </Card.Text>
-        <Button variant='success' style={{backgroundColor:'#046307'}}>Click here</Button>
+        <Button variant='success' style={{backgroundColor:'#046307'}}>Click here</Button>  
       </Card.Body>
     </Card></Col>
         <Col><Image className="homeImg" style={{marginTop:'40px'}} src="https://i.imgur.com/ljcG2x1.png" rounded /></Col>
@@ -50,9 +50,9 @@ function Financing() {
 
 
     <div>
-      <Row>
+      <Row id='financeRow'>
         <Col>    
-        <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
+        <Card style={{ width: '18rem', height: '19rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
       <Card.Img variant="top" src="https://i.imgur.com/zJdUWis.jpg" />
       <Card.Body>
         <Card.Text>
@@ -62,7 +62,7 @@ function Financing() {
     </Card>
     </Col>
         <Col>       
-        <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
+        <Card style={{ width: '18rem', height: '19rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
       <Card.Img variant="top" src="https://i.imgur.com/zJdUWis.jpg" />
       <Card.Body>
         <Card.Text>
@@ -72,7 +72,7 @@ function Financing() {
     </Card>
     </Col>
         <Col>       
-        <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
+        <Card style={{ width: '18rem', height: '19rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
       <Card.Img variant="top" src="https://i.imgur.com/zJdUWis.jpg" />
       <Card.Body>
         <Card.Text>
@@ -82,9 +82,10 @@ function Financing() {
     </Card>
     </Col>
       </Row>
-      <Row>
+
+      <Row id='financeRow2'>
         <Col>        
-        <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
+        <Card style={{ width: '18rem', height: '19rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
       <Card.Img variant="top" src="https://i.imgur.com/zJdUWis.jpg" />
       <Card.Body>
         <Card.Text>
@@ -93,7 +94,7 @@ function Financing() {
       </Card.Body>
     </Card></Col>
         <Col>        
-        <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
+        <Card style={{ width: '18rem', height: '19rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
       <Card.Img variant="top" src="https://i.imgur.com/zJdUWis.jpg" />
       <Card.Body>
         <Card.Text>
@@ -103,7 +104,7 @@ function Financing() {
     </Card>
     </Col>
         <Col>        
-        <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
+        <Card style={{ width: '18rem', height: '19rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)', marginBottom:'40px' }}>
       <Card.Img variant="top" src="https://i.imgur.com/zJdUWis.jpg" />
       <Card.Body>
         <Card.Text>
@@ -163,7 +164,7 @@ function Financing() {
       <div className="p-2">
       <br />
       <Dropdown>
-      <Dropdown.Toggle style={{width:'100%', backgroundColor:'#046307'}} variant="success" id="dropdown-basic">
+      <Dropdown.Toggle style={{width:'100%', backgroundColor:'#046307', display:'flex', justifyContent:'space-between', alignItems:'center'}} variant="success" id="dropdown-basic">
       How programmers and cats are alike?
       </Dropdown.Toggle>
 
@@ -175,7 +176,7 @@ function Financing() {
 
         <div>
         <Dropdown>
-          <Dropdown.Toggle style={{width:'100%', backgroundColor:'#046307'}} variant="success" id="dropdown-basic">
+        <Dropdown.Toggle style={{width:'100%', backgroundColor:'#046307', display:'flex', justifyContent:'space-between', alignItems:'center'}} variant="success" id="dropdown-basic">
             What is Forrest Gump's password?
           </Dropdown.Toggle>
 
@@ -187,7 +188,7 @@ function Financing() {
 
         <div>
          <Dropdown>
-      <Dropdown.Toggle style={{width:'100%', backgroundColor:'#046307'}} variant="success" id="dropdown-basic">
+         <Dropdown.Toggle style={{width:'100%', backgroundColor:'#046307', display:'flex', justifyContent:'space-between', alignItems:'center'}} variant="success" id="dropdown-basic">
         What is debugging?
       </Dropdown.Toggle>
 

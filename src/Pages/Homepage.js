@@ -5,12 +5,12 @@ import ReactPlayer from "react-player";
 function Homepage() {
     return(
         <>
-        <h1 style={{marginTop:'30px'}}>Welcome to Elite Epoxy!</h1>
+        <h1 style={{marginTop:'30px', }}>Welcome to Elite Epoxy!</h1>
         <br />
         <Container id="homeContainer">
       <Row>
         <Col sm={8}>
-        <Image className="homeImg" src="https://i.imgur.com/1ttQIwn.jpg" rounded />
+        <Image className="homeImg" style={{height:'500px'}} src="https://i.imgur.com/mC93ERd.jpg" rounded />
         </Col>
         <Col sm={4}>
         <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
@@ -27,7 +27,7 @@ function Homepage() {
       <br />
       <br />
       <Row>
-        <Col sm={8} xs={4}><Image className="homeImg" src="https://i.imgur.com/rsD6BuR.jpg" rounded /></Col>
+        <Col sm={8} xs={4}><Image className="homeImg" src="https://i.imgur.com/ud7cdDr.jpg" rounded /></Col>
         <Col sm={4} xs={2}>        
         <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
       <Card.Body>
@@ -42,7 +42,7 @@ function Homepage() {
       <br />
       <br />
       <Row>
-        <Col sm={8}><Image className="homeImg" src="https://i.imgur.com/rSTW1nA.jpg" rounded /></Col>
+        <Col sm={8}><Image className="homeImg" src="https://i.imgur.com/rsD6BuR.jpg" rounded /></Col>
         <Col sm={4}>        
         <Card style={{ width: '18rem', boxShadow:'10px 10px 5px 0px rgba(0,0,0,0.75)' }}>
       <Card.Body>

@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function CollapsibleExample() {
   return (
     <Navbar id="navbar" collapseOnSelect expand="lg" variant="dark">
-      <Navbar.Brand href="/home">
+      <Navbar.Brand href="/">
             <img
               src="https://i.imgur.com/vdowI17.png"
               width="30"
@@ -18,10 +18,12 @@ function CollapsibleExample() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/gallery">Gallery</Nav.Link>
             <Nav.Link href="/financing">Financing</Nav.Link>
-            <Nav.Link href="/blogs">Blogs</Nav.Link>
-            <NavDropdown bg="success" variant="light" title="Request Forms" id="collasible-nav-dropdown">
+            <Nav.Link href="/gallery">Gallery</Nav.Link>
+            <Nav.Link href="/floors">Floors</Nav.Link>
+            <Nav.Link href="/countertops">Countertops</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            <NavDropdown bg="success" variant="light" title="Inspection/Estimate Reqests" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/requestform">Standard Request Form</NavDropdown.Item>
               <NavDropdown.Item href="/requestformcustom">
                 Custom Request Form

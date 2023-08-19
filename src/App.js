@@ -8,7 +8,8 @@ import Gallery from './Pages/Gallery'
 import RequestForm from './Pages/RequestForm'
 import RequestFormCustom from './Pages/RequestFormCustom'
 import RequestFormVirtual from './Pages/RequestFormVirtual'
-import Blogs from './Pages/Blogs'
+import Floors from './Pages/Floors'
+import Countertops from './Pages/Countertops'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Contact from './Pages/Contact'
@@ -44,8 +45,12 @@ function App() {
 					element: <RequestForm />
 				},
 				{
-					path: "/Blogs",
-					element: <Blogs />
+					path: "/Floors",
+					element: <Floors />
+				},
+				{
+					path: "/Countertops",
+					element: <Countertops />
 				},
 				{
 					path: "/Login",
@@ -59,14 +64,14 @@ function App() {
 					path: "/Financing",
 					element: <Financing />
 				},
-        			{
-          				path: "/RequestFormCustom",
-          				element: <RequestFormCustom />
-        			},
-        			{
-          				path: "/RequestFormVirtual",
-          				element: <RequestFormVirtual />
-        			},
+        		{
+          			path: "/RequestFormCustom",
+          			element: <RequestFormCustom />
+        		},
+        		{
+          			path: "/RequestFormVirtual",
+          			element: <RequestFormVirtual />
+        		},
 				{
 					path: "/Contact",
 					element: <Contact />
